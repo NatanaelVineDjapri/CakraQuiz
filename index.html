@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CakraQuiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+<body class="index">
+    <!-- Navigation -->
+    <div class="navigation-wrapper">
+     <div class="navigation-container">
+        <div class="navigation-sub">
+            <div class="title-navigation">
+                <a href="#">CakraQuiz<span>.</span></a>
+            </div>
+            <div class="navigation-links">
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#akun">Akun</a></li>
+                    <li><a href="#mainquiz">Main Quiz</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navigation-sub-2">
+            <ul>
+                <li class="nav-login"><a href="login.html">Login</a></li>
+                <li class="nav-sign-up"><a href="register.html">SignUp</a></li>
+            </ul>
+        </div>
+     </div>
+     </div>
+     <div class="shortcut-container">
+        <ul class = "shortcut-links">
+            <li><button><ion-icon name="person-circle-outline"></ion-icon></button></li>
+            <li><a href="login.html" id="loginBott"><ion-icon name="enter-outline"></ion-icon></a></li>
+            <li><button onclick="logout()" id="logoutBott"><ion-icon name="exit-outline"></ion-icon></button></li>
+           
+        </ul>
+    </div>
+    <!-- Section beranda -->
+    <section id="beranda">
+        <div class="beranda-container">
+            <div class="beranda-sub">
+                <div class="title-desc-beranda">
+                    <h1>Uji Pengetahuanmu!</h1>
+                    <p>Yuk, bermain quiz tentang planet dan rahasia tata surya! Dari planet terpanas sampai fenomena kosmik menakjubkan. Siap bersaing dan tunjukkan siapa yang paling paham alam semesta?</p>
+                </div>
+                <div class="buttom-quiz">
+                    <p>Mulai Quiz</p>
+                </div>
+            </div>
+            <div class="beranda-sub-2">
+                <div class="sub-2-images">
+                    <img src="images/BerandaPicture/1.png" alt="BerandaImages">
+                    <img src="images/BerandaPicture/3.png" alt="BerandaImages">
+                    <img src="images/BerandaPicture/4.png" alt="BerandaImages">
+                    <img src="images/BerandaPicture/2.png" alt="BerandaImages">
+                </div>
+            </div>
+        </div>
+            <div class="beranda-sub-3">
+                <div class="beranda-quotes-container">
+                    <div class="beranda-quotes">
+                        <h1> “One truth I have discovered for sure: When you believe that all things are possible and you are willing to work hard to accomplish your goals, you can achieve the next ‘impossible’ dream. No dream is too high!”</h1>
+                    </div>
+                    <div class="beranda-quotes-maker">
+                        <div class="quotes-left">
+                            <img class="quotes-image" src="images/QuotesMaker (1).png" alt="Quotes Maker">
+                            <div class="quotes-maker">
+                                <h3>Buzz Aldrin</h3>
+                                <p>Pilot Lunar Module Apollo 11</p>
+                            </div>
+                        </div>
+                        <div class="quotes-right">
+                            <img src="images/tandakutip.png" alt="Quotes Mark Sign">
+                        </div>
+                    </div>
+                </div>
+                <div class="beranda-account">
+                    <div class="title-beranda-account">
+                        <h1>Sudah memiliki Akun?</h1>
+                        <div class="beranda-text">
+                             <p>Buat akun gratis dan ikuti</p>
+                            <p>tantangan quiz tata surya kita!</p>
+                        </div>
+                       
+                    </div>
+                    <div class="beranda-sign-up">
+                        <p>Yuk Sign Up sekarang !</p>
+                    </div>
+                </div>
+            </div>
+        
+    </section>
+    <div class="line-pembatas">
+        <p>Planet, Matahari, Bulan, Mars, Jupiter, Saturnus, Venus, Merkurius, Tata Surya, Galaksi, Bintang, Astronaut, NASA, Ruang Angkasa, Eksplorasi, Teleskop, Blackhole, Kosmos, Pengetahuan, Inspirasi, Keajaiban, Quiz, Gravitasi, Komet, Supernova, Nebula, Eksoplanet, SpaceX, Observasi, Eksplorasi, Astronaut, Matahari, Edukasi, Mars, Jupiter, Saturnus, Venus, Merkurius, Tata Surya, Galaksi, Bintang, Pluto, Uranus , Jupiter, Saturnus, Meteor, Asteroid, Seru, Asik, Eksplorasi, Teleskop, Blackhole, Kosmos, Pengetahuan, Inspirasi, Keajaiban, Quiz, Gravitasi, Komet, Supernova, Nebula, Eksoplanet, SpaceX, Observasi,</p>
+    </div>
+    
+    
+    <div class="container-utama">
+        <!-- Section tentang -->
+        <section id="tentang">
+            <div class="tentang-wrapper">
+                <div class="tentang-container">
+                    <div class="tentang-sub-left">
+                        <div class="title-desc-tentang">
+                            <h1> Apa itu CakraQuiz<span>.</span> ?</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo sunt, debitis in similique quae aliquam vero sed deleniti veniam accusamus labore minus et, reiciendis voluptate animi voluptates sapiente omnis architecto, laboriosam rem? Neque labore at eum laboriosam vero. At labore necessitatibus dolor perspiciatis accusantium quidem ducimus officia nisi cum nihil?</p>
+                            <div class="slogan">
+                                <div class="garis"></div>
+                                <p>Belajar Seru, Tahu Alam Semesta!</p>
+                            </div>
+                        </div>
+                        <div class="rating-container">
+                            <div class="rating-sub">
+                                <!-- <img src="images/Star.png" alt=""> -->
+                                <h1>A+</h1>
+                                <p>Interaktif</p>
+                            </div>
+                            <div class="rating-sub">
+                                <h1>A+</h1>
+                                <p>Edukatif</p>
+                            </div>
+                            <div class="rating-sub">
+                                <h1>B+</h1>
+                                <p>Menantang</p>
+                            </div>
+                            <div class="rating-sub">
+                                <h1>S++</h1>
+                                <p>Edukasi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Link -->
+                    <div class="tentang-sub-right">
+                        <div class="education-container">
+
+                            <div class="education-sub-1">
+                                <h4>Planet & Tata Surya</h4>
+                                <div class="edu-arrow">
+                                    <p>Pelajari lebih lanjut </p>
+                                    <a href=""><ion-icon name="arrow-forward-outline"></ion-icon></a>
+                                </div>
+                            </div>
+                            <div class="education-sub-2">
+                                <h4>Tokoh & Astronaut</h4>
+                                <div class="edu-arrow">
+                                    <p>Pelajari lebih lanjut </p>
+                                    <a href=""><ion-icon name="arrow-forward-outline"></ion-icon></a>
+                                </div>
+                            </div>
+                            <div class="education-sub-3">
+                                <h4>Fenomena Alam Semesta</h4>
+                                <div class="edu-arrow">
+                                    <p>Pelajari lebih lanjut </p>
+                                    <a href=""><ion-icon name="arrow-forward-outline"></ion-icon></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Statistik -->
+                <div class="statistik-wrapper">
+                    <div class="statistik-button">
+                        <button id="prev-bott"><ion-icon name="arrow-back-outline"></ion-icon></button>
+                        <button id="next-bott"><ion-icon name="arrow-forward-outline"></ion-icon></button>    
+                    </div>
+                    <div class="statistik-indonesia">
+                        
+                        <div class="statistik-sub">
+                            <img src="images/blackGalaxy.png" alt="">
+                            <div class="statistik-title">
+                                <h3>80 Tahun</h3>
+                                <p>Kemerdekaan</p>
+                            </div>
+                        </div>
+                        <div class="statistik-sub">
+                            <img src="images/WarisanBudaya.png" alt="">
+                            <div class="statistik-title">
+                                <h3>1728</h3>
+                                <p>Warisan Budaya</p>
+                            </div>
+                        </div>
+                        <div class="statistik-sub">
+                            <img src="images/KerajaanIndonesia-2" alt="">
+                            <div class="statistik-title">
+                                <h3>270</h3>
+                                <p>Kerajaan</p>
+                            </div>
+                        </div>
+                        <div class="statistik-sub">
+                            <img src="images/SukuBangsaIndonesia" alt="">
+                            <div class="statistik-title">
+                                <h3>1340</h3>
+                                <p>Suku Bangsa</p>
+                            </div>
+                        </div>
+                        <div class="statistik-sub">
+                            <img src="images/PendudukIndonesia" alt="">
+                            <div class="statistik-title">
+                                <h3>283 Jt</h3>
+                                <p>Penduduk</p>
+                            </div>
+                        </div>
+                        <div class="statistik-sub">
+                            <img src="images/BahasaIndonesia" alt="">
+                            <div class="statistik-title">
+                                <h3>718</h3>
+                                <p>Bahasa</p>
+                            </div>
+                        </div>
+                        <div class="statistik-sub">
+                            <img src="images/TempatIbadah" alt="">
+                            <div class="statistik-title">
+                                <h3>6</h3>
+                                <p>Agama</p>
+                            </div>
+                        </div>
+                        <div class="statistik-sub">
+                            <img src="images/PendudukIndonesia" alt="">
+                            <div class="statistik-title">
+                                <h3>3259</h3>
+                                <p>Kuliner</p>
+                            </div>
+                        </div>
+                        <div class="statistik-sub">
+                            <img src="images/AlatMusikIndonesia.png" alt="">
+                            <div class="statistik-title">
+                                <h3>100 +</h3>
+                                <p>Alat Musik</p>
+                            </div>
+                        </div>
+                        <div class="statistik-sub">
+                            <img src="images/LuasIndonesia.png" alt="">
+                            <div class="statistik-title">
+                                <h3>1905 Juta</h3>
+                                <p>Luas Wilayah</p>
+                            </div>
+                        </div>
+                        <div class="statistik-sub">
+                            <img src="images/PahlawanNasionalIndonesia.png" alt="">
+                            <div class="statistik-title">
+                                <h3>306</h3>
+                                <p>Pahlawan Nasional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+            </div>
+        </section>
+        <!-- Section quiz -->
+        <section id="mainquiz">
+            <div class="quiz-container">
+                <div class="quiz-title">
+                    <div class="quiz-line"></div>
+                    <h1>Cakra Main Quiz</h1>
+                </div>
+                <div class="quiz-sub-wrapper">
+                    <div class="quiz-sub-left">
+                        <div class="q-left-top">
+                            <p>Pilihlah jenis Quiz dan buktikan penegathuanmu</p>
+                        </div>
+                        <div class="q-left-bottom">
+                            <img src="images/blackGalaxy.png" alt="">
+                        </div>
+                    </div>
+                    <div class="quiz-sub-right">
+                        <div class="sub-right-quiz">
+                            <img src="images/KerajaanIndonesia-2" alt="">
+                            <div class="desc-quiz">
+                                <div class="h3">Lorem, ipsum dolor.</div>
+                                <div class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, optio.</div>
+                            </div>
+                            <div class="bottom-quiz" >
+                               <button onclick="goQuiz('quiz1')"><ion-icon name="chevron-forward-outline"></ion-icon></button> 
+                            </div>
+                        </div>
+                        <div class="sub-right-quiz">
+                            <img src="images/KerajaanIndonesia-2" alt="">
+                            <div class="desc-quiz">
+                                <div class="h3">Lorem, ipsum dolor.</div>
+                                <div class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, optio.</div>
+                            </div>
+                            <div class="bottom-quiz" >
+                               <button onclick="goQuiz('quiz2')"><ion-icon name="chevron-forward-outline"></ion-icon></button> 
+                            </div>
+                        </div>
+                        <div class="sub-right-quiz">
+                            <img src="images/KerajaanIndonesia-2" alt="">
+                            <div class="desc-quiz">
+                                <div class="h3">Lorem, ipsum dolor.</div>
+                                <div class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, optio.</div>
+                            </div>
+                            <div class="bottom-quiz" >
+                               <button onclick="goQuiz('quiz3')"><ion-icon name="chevron-forward-outline"></ion-icon></button> 
+                            </div>
+                        </div>
+                        <div class="sub-right-quiz">
+                            <img src="images/KerajaanIndonesia-2" alt="">
+                            <div class="desc-quiz">
+                                <div class="h3">Lorem, ipsum dolor.</div>
+                                <div class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, optio.</div>
+                            </div>
+                            <div class="bottom-quiz" >
+                               <button onclick="goQuiz('quiz4')"><ion-icon name="chevron-forward-outline"></ion-icon></button> 
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <section id="akun">
+        <div class="account-wrapper">
+            <div class="wrapper-in">
+                <div class="title-account">
+                    <h1>Account CakraQuiz <span>.</span></h1>
+                    <div class="account-line"></div>
+                </div>
+                <div class="account-container">
+                    <div class="account-sub-top">
+                        <div class="top-left">
+                            <img src="images/astronot.png" alt="">
+                        </div>
+                        <div class="top-right">
+                            <h3>Kartu Pemain CakraQuiz <span>.</span></h3>
+                            <div class="identitas-container" id="identitas">
+                                <div class="identitas-baris">
+                                    <div class="sub-title">Username</div>
+                                    <div class="colons">: </div>
+                                    <div class="colon" id="displayUsername">Unknown</div>
+                                </div>
+                                <div class="identitas-baris">
+                                    <div class="sub-title">ID</div>
+                                    <div class="colons">: </div>
+                                    <div class="colon" id="displayId"> nknown</div>
+                                </div>
+                                <div class="identitas-baris">
+                                    <div class="sub-title">Skor</div>
+                                    <div class="colons">: </div>
+                                    <div class="colon" id="displaySkor"> 0</div>
+                                </div>
+                                <div class="identitas-baris">
+                                    <div class="sub-title">Nasionalisme</div>
+                                    <div class="colons">: </div>
+                                    <div class="colon" id="displayNasionalisme"> D</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account-sub-bottom">
+                        <div class="sub-right">
+                            <div class="leaderboard-title">
+                                <h2>Leaderboard</h2>
+                                <h3>CakraQuiz <span>.</span></h3>
+                            </div>
+                            <div class="leaderboard-container" id="leaderboard">
+                                <!-- <div class="leaderboard-sub">
+                                    <img src="images/buzzaldrin.webp" alt="">
+                                    <div class="leaderboard-sub-title">
+                                        <p>Vazelco</p>
+                                        <p> 3360</p>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="youtube-container">
+        <div class="youtube-title">
+            <h1>Eksplorasi Pengetahuan Yuk!</h1>
+            <p>Nasa Educational Video</p>
+        </div>
+        <div class="youtube-sub">
+            <iframe src="https://www.youtube.com/embed/r0bbq-soSfI?si=MaIdDq2LKUgfeH9R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/EJXTZ5jpSmk?si=_QDMroW2f20jVOL-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/EU8dbEH25ak?si=q5GzEmImGL8L_Bhm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    
+    </div>
+    <div class="footer-container">
+        <div class="footer-sub-left">
+            <div class="footer-title">
+                <h1>CarkraQuiz <span>.</span></h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <ul class="footer-ul">
+                <li><ion-icon name="logo-twitter"></ion-icon></li>
+                <li><ion-icon name="logo-discord"></ion-icon></li>
+                <li><ion-icon name="logo-instagram"></ion-icon></li>
+                <li><ion-icon name="logo-facebook"></ion-icon></li>
+                <ion-icon name="logo-youtube"></ion-icon>
+            </ul>
+        </div>
+        <div class="footer-sub-center">
+            <ul>
+                <li><p>QUICK LINK</p></li>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#mainquiz">Main Quiz</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#akun">Akun</a></li>
+            </ul>
+            
+        </div>
+        <div class="footer-sub-right">
+            <ul>
+                <li><p>Reference</p></li>
+                <li><a href="#beranda">Nasa</a></li>
+                <li><a href="#mainquiz">Ruang Guru</a></li>
+                <li><a href="#tentang">Zenius</a></li>
+                <li><a href="#akun">Kita Bisa</a></li>
+            </ul>
+            
+        </div>
+    </div>
+    <div class="copyright"><p>@2025 CakraQuiz. All rights reserved.</p></div>
+
+<script src="ui.js"></script>
+<script src="script.js"></script>
+<script src="quiz.html"></script>
+</body>
+
+
+</html>
+
