@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body class="body-quiz">
+    <div class="quiz-wrapper" id="quizwrapper">
+    <div class="quiz-container-1">
+        <div class="quiz-subtop">
+            <div class="quiz-image">
+                <img id="gambarSoal" alt="">
+            </div>
+            <div class="quiz-soal" id="pertanyaan">
+                <div class="nomor"><p>10.</p></div>
+                <p class="soal">Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+        <div class="quiz-subbott" id="answer-buttons">
+            <div class="quiz-bott-1" id="quiz-bott">
+                <p class="pilihan">A</p>
+                <button class="btn">Lorem, ipsum.</button>
+            </div>
+            <div class="quiz-bott-1" id="quiz-bott">
+                <p class="pilihan">B</p>
+                <button class="btn">Lorem, ipsum.</button>
+            </div>
+            <div class="quiz-bott-1" id="quiz-bott">
+                <p class="pilihan">C</p>
+                <button class="btn">Lorem, ipsum.</button>
+            </div>
+            <div class="quiz-bott-1" id="quiz-bott">
+                <p class="pilihan">D</p>
+                <button class="btn">Lorem, ipsum.</button>
+            </div>
+        </div>
+        <button id="next" class="next">Next</button>
+    </div>
+    </div>    
+    <div class="score-wrapper" id="result">
+        <div class="score-container">
+            <div class="score-profile">
+                <img src="../images/astronot.png" alt="">
+                <div class="score-title">
+                    <div class="name" id="displayUsername"></div>
+                    <div class="name" id="displayId"></div>
+                </div>
+            </div>
+            <div class="accuracy">
+                <div class="accuracy-tittle">
+                    <h3>Accuracy</h3>
+                    <p id="accuracy"></p>
+                </div>
+                <div class="progress">
+                    <div class="progress-fill" id="bar" ></div>
+                </div>
+            </div>
+            <div class="score-sub">
+                <div class="score-tittle">
+                    <h3>Score</h3>
+                    <div class="score-real">
+                        <p id="skor"></p>
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <div class="feedback-sub">
+                <h3>Feedback</h3>
+                <p id="feedback-salah">s</p>
+                <p id="feedback">s</p>
+                
+            </div> 
+            <div class="button-score">
+                <button class="exit-bott" id="exitbot">Exit</button>
+                <button class="next-bott" id="nextquizbot">Next</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/planet.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/quiz.js"></script>
+</body>
+</html>

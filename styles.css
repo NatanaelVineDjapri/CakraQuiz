@@ -130,6 +130,7 @@ span{
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 10rem;
 }
 
 .shortcut-container {
@@ -172,10 +173,11 @@ ul li {
 }
 .beranda-sub{
     flex: 1;
-    height: 97%;
+    height: 95%;
     background-color: #8b0000;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     /* gap: clamp(1px, 20%, 2rem); */
     color: #fff;
     border-radius: 1rem;
@@ -209,6 +211,10 @@ ul li {
     color: var(--fifth-color);
 }
 
+.buttom-quiz a{
+    text-decoration: none;
+    color: var(--fifth-color);
+}
 .beranda-sub-2{
     flex: 1;
     height: 43%;
@@ -352,6 +358,8 @@ ul li {
     display: flex;
     align-items: center;
     justify-content: center;
+    display: flex;
+    bottom: 0;
     
 }
 
@@ -367,7 +375,8 @@ ul li {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    display: flex;
+    bottom: 0;
 }
 
 .line-pembatas p{
@@ -456,6 +465,7 @@ ul li {
 
 .title-desc-tentang p{
     line-height: 1.5;
+    text-align: justify;
 }
 
 .slogan{
@@ -599,8 +609,8 @@ button{
 }
 
 .statistik-sub img{
-    width: 5rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 1rem;
 }
 
@@ -637,7 +647,7 @@ button{
 
 .quiz-sub-wrapper{
     display: flex;
-    gap: 2rem;
+    justify-content: center;
 }
 .quiz-sub-left{
     display: flex;
@@ -673,7 +683,7 @@ button{
 
 .quiz-sub-right{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 76%;
 }
 
@@ -717,17 +727,19 @@ button{
 .register-container{
     /* background-color: #b6653f; */
     width: 90%;
-    height: 300%;
-    margin: 50px auto;
+    height: 100%;
+    margin: 8.55rem auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 3rem;
     display: flex;
 }
 
 .login-container{
     width: 90%;
-    height: 58.8vh;
-    margin: 50px auto;
+    height: 100%;
+    margin: 8.55rem auto;
     display: flex;
     gap: 3rem;
     display: flex;
