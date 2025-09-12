@@ -52,6 +52,7 @@ function showQuestion(){
     document.querySelectorAll(".quiz-bott-1").forEach(function(kotak){
         kotak.style.background = ""; 
     });
+
     // Isi jawaban
     if(currentQuestion.gambar){
         gambarSoal.src = currentQuestion.gambar;
@@ -90,8 +91,12 @@ function pilihJawaban(btn){
         benar++;
     } else {
         kotak.style.background = "red";
-        skor +=10;
-        salah++;
+        salah++;  
+        if(skor>0){
+          skor -=10;
+        } else {
+            skor = 0;
+        }
     }
 
     tombol.forEach(function(b){
@@ -125,23 +130,25 @@ function handleNextButton() {
         showQuestion();
     } else {
         // Quiz selesai
-        var curUser = JSON.parse(localStorage.getItem("userIn"));
+        let curUser = JSON.parse(localStorage.getItem("userIn"));
        
         if (curUser) {
             // Ambil skor lama
-            var skorLama = curUser.skor;
+            let skorLama = curUser.skor;
 
             var skorBaru = skorLama + skor;
             curUser.skor = skorBaru;
+            curUser.tingkat = userRank(skorBaru);
 
             // Simpan kembali ke localStorage
             localStorage.setItem("userIn", JSON.stringify(curUser));
 
             // Update juga di array users
-            var users = JSON.parse(localStorage.getItem("users")) || [];
+            let users = JSON.parse(localStorage.getItem("users")) || [];
             for (var i = 0; i < users.length; i++) {
                 if (users[i].username === curUser.username) {
                     users[i].skor = skorBaru;
+                    users[i].tingkat = curUser.tingkat;
                     break;
                 }
             }
@@ -175,6 +182,7 @@ function handleNextButton() {
         if (kategori === "quiz4") {
             nextQuiz.style.display = "none";   
         }
+        
     }
 }
 
@@ -193,6 +201,7 @@ function feedBack(){
         return "Wah, banyak yang belum dipahami, mending pelajari dari awal.";
     }
 }
+
 exitQuiz.addEventListener("click",function(){
     window.location.href = "index.html";
 });

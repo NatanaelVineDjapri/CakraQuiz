@@ -1,6 +1,5 @@
 const registerForm = document.getElementById("registerForm");
 const registerMsgs = document.getElementById("registerMsg");
-const pahlawan = document.querySelector('input[name="pahlawan"]:checked');
 const loginForm = document.getElementById('loginForm');
 const loginMsgs = document.getElementById("loginMsg");
 const logoutBott = document.getElementById('logoutBott');
@@ -14,7 +13,7 @@ class User{
         this.username = username;
         this.password = password;
         this.id = id;
-        this.skor = 20020;
+        this.skor = 0;
         this.tingkat = "C"
     }
 }
@@ -145,6 +144,24 @@ function showLeaderboard(x){
 
 }
 
+function userRank(kartuSkor) {
+    let rank;
+
+    if (kartuSkor >= 20000) {
+        rank = "S";   
+    } else if (kartuSkor >= 7000) {
+        rank = "A";
+    } else if (kartuSkor >= 3000) {
+        rank = "B";
+    } else if (kartuSkor >= 1000) {
+        rank = "C";
+    } else {
+        rank = "D";   
+    }
+
+    return rank;
+}
+
 if(registerForm){
     registerForm.addEventListener("submit", function(r){
     r.preventDefault(); //biar ga reload
@@ -188,7 +205,7 @@ if(curUsername) {
    kartuUsername = curUsername.username;
    kartuId = curUsername.id;
    kartuSkor = curUsername.skor;
-   kartuTingkat= curUsername.tingkat;
+   kartuTingkat= userRank(kartuSkor);
 }
 
 if (curUsername) {
