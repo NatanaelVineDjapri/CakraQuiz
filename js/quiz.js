@@ -158,6 +158,7 @@ function handleNextButton() {
 
         const quizContainer = document.getElementById('quizwrapper');
         const scoreContainer = document.getElementById('result');
+
         if(quizContainer){
             quizContainer.style.display = "none";
         }
@@ -171,7 +172,9 @@ function handleNextButton() {
             feedbackText.textContent = saranText;
         }
 
-    
+        if (kategori === "quiz4") {
+            nextQuiz.style.display = "none";   
+        }
     }
 }
 
