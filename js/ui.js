@@ -4,7 +4,6 @@ const tombolNext = document.getElementById('next-bott');
 const tombolPrev = document.getElementById('prev-bott');
 
 
-//slider
 let posisi = 0
 const gap = 16;
 const lebar = semuaSubItem[0].offsetWidth;

@@ -85,6 +85,14 @@ ul .nav-login a:hover{
     font-weight: 700;
 }
 
+a{
+    text-decoration: none;
+}
+
+.beranda-title-sign{
+    color: var(--fifth-color);
+}
+
 span{
     color: var(--secondary-color);
 }
@@ -789,6 +797,7 @@ button{
     padding: 1rem;
     margin: 0px;
     display: flex;
+    justify-content: center;
 }
 
 .sub-right-top-2{
@@ -797,7 +806,7 @@ button{
     padding: 0rem 1rem;
     margin: 0px;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     color: var(--fourth-color);
 }
 
@@ -811,13 +820,13 @@ button{
 }
 
 .sub-right-bottom{
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     border-radius: 1rem;
     height: 5.5rem;
     width: 100%;
     color: var(--fourth-color);
     box-sizing: border-box;
-    padding: 0.7rem;
+    padding: 1.2rem;
     display: flex;
     align-items: center;
     

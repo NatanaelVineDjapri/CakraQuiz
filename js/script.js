@@ -45,13 +45,18 @@ function register(username,password, id){
     users.push(userBaru);
     simpenUserLogin();
 
+    setTimeout(function(){
+        window.location.href ="login.html"
+    },2000)
+   
     return {
         success: true,
         message: "Registrasi berhasil!"
     };    
+    
 }
 
-function login(username, password,id,skor){
+function login(username, password){
     const cekUser = users.find(function(user){
         return user.username === username && user.password === password;
     })
@@ -81,7 +86,7 @@ function logout(){
 }
 
 function cekLogin(){
-    return localStorage.getItem('userIn') !== null //true
+    return localStorage.getItem('userIn') !== null 
 }
 
 
@@ -93,7 +98,7 @@ function goQuiz(kategori){
     }
 }
 
-//on off shortcut login/logout
+
 function updateShortCut(){
     if (!loginBott || !logoutBott) {
         return;
@@ -140,8 +145,6 @@ function showLeaderboard(x){
     }
 
     x.innerHTML = output
-
-
 }
 
 function userRank(kartuSkor) {
@@ -164,7 +167,7 @@ function userRank(kartuSkor) {
 
 if(registerForm){
     registerForm.addEventListener("submit", function(r){
-    r.preventDefault(); //biar ga reload
+    r.preventDefault(); 
 
     const username = document.getElementById("reqUsername").value;
     const password = document.getElementById("reqPassword").value;
@@ -197,8 +200,7 @@ if(loginForm){
     } else {
         loginMsgs.textContent = hasilLogin.message
     }
-
-})
+    })
 }
 
 if(curUsername) {
