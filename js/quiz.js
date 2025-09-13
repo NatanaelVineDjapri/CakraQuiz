@@ -19,12 +19,12 @@ let benar = 0;
 let salah = 0;
 
 if (kategori && pertanyaan[kategori]) {
-    pilihQuiz(kategori);   // ambil soal sesuai kategori
+    chooseQuiz(kategori);   
 } else {
     alert("Kategori quiz tidak ditemukan!");
 }
 
-function pilihQuiz(kategori) {
+function chooseQuiz(kategori) {
     if (pertanyaan[kategori]) {
         currentQuiz = pertanyaan[kategori];
         startQuiz();
@@ -38,22 +38,21 @@ function startQuiz(){
     skor=0;
     nextButton.innerHTML="Next"
     showQuestion();
-    // startTimer();
 }
 
 function showQuestion(){
     let currentQuestion = currentQuiz[currentQuestionIndex];
     let questionNo = currentQuestionIndex +1;
     pertanyaanAll.innerHTML = `
-    <div class="nomor"><p>${questionNo}</p></div>
+                <div class="nomor"><p>${questionNo}</p></div>
                 <p class="soal">${currentQuestion.pertanyaan}</p>
-    `
+                `
 
     document.querySelectorAll(".quiz-bott-1").forEach(function(kotak){
         kotak.style.background = ""; 
     });
 
-    // Isi jawaban
+  
     if(currentQuestion.gambar){
         gambarSoal.src = currentQuestion.gambar;
         gambarSoal.style.display = "block";
@@ -62,14 +61,14 @@ function showQuestion(){
     }
 
     currentQuestion.jawaban.forEach(function(jawab, index) {
-    var btn = tombol[index];              // ambil tombol sesuai index
-    btn.innerText = jawab.text;           // isi teks tombol
-    btn.dataset.correct = jawab.correct;  // tandai benar/salah
-    btn.disabled = false;
-    btn.style.background=""
-    btn.onclick = function() {            // event klik
-        pilihJawaban(btn);                // panggil fungsi cek
-    };
+        var btn = tombol[index];            
+        btn.innerText = jawab.text;          
+        btn.dataset.correct = jawab.correct;  
+        btn.disabled = false;
+        btn.style.background=""
+        btn.onclick = function() {           
+            chooseAnswer(btn);                
+        };
     });
 
     nextButton.style.display = "none"
@@ -81,7 +80,7 @@ function showQuestion(){
 }
 
 
-function pilihJawaban(btn){
+function chooseAnswer(btn){
     var bener = btn.dataset.correct === "true";
     let kotak = btn.parentElement;
     
@@ -101,9 +100,9 @@ function pilihJawaban(btn){
 
     tombol.forEach(function(b){
         if(b.dataset.correct === "true"){
-            b.parentElement.style.background = "green"; // highlight jawaban benar
+            b.parentElement.style.background = "green"; 
         }
-        b.disabled = true; // matiin semua tombol biar ga bisa diklik lagi
+        b.disabled = true; 
     });
 
     nextButton.style.display = "block";
@@ -124,26 +123,23 @@ function progressBar(jawabanBenar){
     }
 
 }
+
 function handleNextButton() {
     currentQuestionIndex++;
     if (currentQuestionIndex < currentQuiz.length) {
         showQuestion();
     } else {
-        // Quiz selesai
         let curUser = JSON.parse(localStorage.getItem("userIn"));
-       
         if (curUser) {
-            // Ambil skor lama
+    
             let skorLama = curUser.skor;
-
-            var skorBaru = skorLama + skor;
+            let skorBaru = skorLama + skor;
             curUser.skor = skorBaru;
             curUser.tingkat = userRank(skorBaru);
 
-            // Simpan kembali ke localStorage
+        
             localStorage.setItem("userIn", JSON.stringify(curUser));
 
-            // Update juga di array users
             let users = JSON.parse(localStorage.getItem("users")) || [];
             for (var i = 0; i < users.length; i++) {
                 if (users[i].username === curUser.username) {
@@ -153,12 +149,11 @@ function handleNextButton() {
                 }
             }
 
-            // Simpan array users kembali ke localStorage
             localStorage.setItem("users", JSON.stringify(users));
         }
 
         if (displaySkor) {
-            displaySkor.textContent = skor; // atau curUser.skor jika mau total
+            displaySkor.textContent = skor; 
         }
 
         nextButton.style.display = "none";
