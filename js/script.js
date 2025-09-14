@@ -192,8 +192,6 @@ if(loginForm){
 
     const username = document.getElementById("logUsername").value;
     const password = document.getElementById("logPassword").value;
-        
-    
     const hasilLogin = login (username,password);
     if(hasilLogin.success){
         window.location.href ="index.html"

@@ -116,6 +116,7 @@ function progressBar(jawabanBenar){
     let persen = (jawabanBenar/totalSoal)*100;
     const progressFill = document.getElementById("bar")
     const accuracyText = document.getElementById("accuracy")
+    
     if(progressFill){
         
         progressFill.style.width = persen*6+"px";
@@ -137,7 +138,6 @@ function handleNextButton() {
             curUser.skor = skorBaru;
             curUser.tingkat = userRank(skorBaru);
 
-        
             localStorage.setItem("userIn", JSON.stringify(curUser));
 
             let users = JSON.parse(localStorage.getItem("users")) || [];
