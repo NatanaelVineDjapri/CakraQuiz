@@ -234,15 +234,15 @@ const pertanyaan = {
         { text: "Apollo 1", correct: false },
         { text: "Vostok 1", correct: false }
         ],
-        gambar: "../images/Quiz3/Q3N4.jpg"
+        gambar: "../images/Quiz3/Q3N4.png"
     },
     {
         pertanyaan: "Gambar tersebut adalah manusia pertama di luar angkasa, siapakah namanya …",
         jawaban: [
         { text: "Neil Armstrong", correct: false },
         { text: "Yuri Gagarin", correct: true },
-        { text: "mas fuad", correct: false },
-        { text: "ambastronot", correct: false }
+        { text: "Gagaslin Yeri", correct: false },
+        { text: "Yuri Gagasin", correct: false }
         ],
         gambar: "../images/Quiz3/Q3N5.jpg"
     },
@@ -347,7 +347,7 @@ const pertanyaan = {
         pertanyaan: "Benda langit yang jatuh ke Bumi disebut …",
         jawaban: [
         { text: "Asteroid", correct: false },
-        { text: "ambateroid", correct: false },
+        { text: "Ambateroid", correct: false },
         { text: "Meteor", correct: true },
         { text: "Planet kecil", correct: false }
         ]

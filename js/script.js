@@ -98,6 +98,7 @@ function goQuiz(kategori){
     }
 }
 
+document.addEventListener("DOMContentLoaded", updateShortCut);
 
 function updateShortCut(){
     if (!loginBott || !logoutBott) {
@@ -113,7 +114,7 @@ function updateShortCut(){
 }
 
 function randomId(){
-    let id;
+    let id = Math.floor(Math.random() * 1000) + 1000;
 
     while(users.some(function(u){
         return u.id === id;
@@ -134,7 +135,7 @@ function showLeaderboard(x){
     });
 
     let output =""
-    for(let i =0;i<3;i++){
+    for(let i =0;i < Math.min(3, users.length);i++){
         output += `<div class="leaderboard-sub">
                             <img src="../images/astronot.png" alt="">
                             <div class="leaderboard-sub-title">
@@ -213,8 +214,8 @@ if(curUsername) {
 if (curUsername) {
     const usernameEl = document.getElementById("displayUsername");
     const idEl = document.getElementById("displayId");
-    const skorEl = document.getElementById("displaySkor"); // mungkin ga ada di halaman ini
-    const nasionalismeEl = document.getElementById("displayNasionalisme");
+    const skorEl = document.getElementById("displaySkor"); 
+    const peringkatEl = document.getElementById("displayNasionalisme");
 
     if (usernameEl) {
         usernameEl.textContent = " " + kartuUsername;
@@ -225,14 +226,14 @@ if (curUsername) {
     if (skorEl) {
         skorEl.textContent = " " + kartuSkor; 
     }
-    if (nasionalismeEl) {
-        nasionalismeEl.textContent = " " + kartuTingkat;
+    if (peringkatEl) {
+        peringkatEl.textContent = " " + kartuTingkat;
     }
 }
 
 showLeaderboard(leaderboard);
 
-document.addEventListener("DOMContentLoaded", updateShortCut);
+
 // localStorage.clear();
 
 
