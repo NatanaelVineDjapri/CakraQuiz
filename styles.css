@@ -10,8 +10,6 @@
 html,body{
     margin: 0;
     padding: 0;
-    /* height: 100%; */
-    /* margin-top: 70px; */
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--background-color);
 }
@@ -29,7 +27,6 @@ section{
     top: 0;
     z-index: 9999;
     transform: translateX(-50.01%);
-   
 }
 
 .navigation-container{
@@ -66,7 +63,9 @@ section{
 }
 
 .navigation-links ul li a:hover,
-ul .nav-login a:hover{
+ul .nav-login a:hover,
+.footer-sub-center ul li a:hover,
+.footer-sub-right ul li a:hover{
     text-shadow: 0 0.01875rem 0 currentColor;
     text-decoration: underline;
     text-decoration-color:var(--third-color) ;
@@ -152,13 +151,10 @@ span{
 }
 
 ul.shortcut-links{
-
-    /* width: 100%; */
     margin: 0 auto;
     padding: 0.375rem;
-    
-    
 }
+
 .shortcut-links li button,
 .shortcut-links li a{
     color: var(--fifth-color);
@@ -302,6 +298,7 @@ ul li {
     justify-content: center;
     margin-top: 0.6rem;
 }
+
 .quotes-left h3{
     margin: 0;
 }
@@ -377,7 +374,6 @@ ul li {
     white-space: nowrap;
     height: 3rem;
     margin-top: 3.5rem;
-    /* margin-bottom: 3rem; */
     background-color: var(--third-color);
     display: flex;
     align-items: center;
@@ -462,6 +458,7 @@ ul li {
 .rating-sub p{
     margin: 0px;
 }
+
 .rating-sub img{
     height: 50px;
 }
@@ -487,11 +484,13 @@ ul li {
 .slogan p{
     margin: 0;
 }
+
 .garis{
     height: 2px;
     width: 8rem;
     background-color: white;
 }
+
 .tentang-sub-right{
     width: 35%;
     box-sizing: border-box;
@@ -567,7 +566,6 @@ ul li {
 }
 
 .statistik-indonesia{
-    /* width: 1215.73px; */
     display: flex;
     gap: 1rem;
      transition: transform 0.5s ease;
@@ -593,7 +591,7 @@ button{
 
 
 .statistik-sub {
-    width: 250px;   /* width tetap 225px */
+    width: 250px;   
     min-width: 250px;
     max-width: 250px;
     background-color: var(--fourth-color);
@@ -639,13 +637,11 @@ button{
     display: flex;
     flex-direction: column;
     width: 90vw;
-    /* background-color: #8b0000; */
 }
 
 .quiz-title{
     display: flex;
     gap: 1rem;
-    /* justify-content: center; */
     align-items: center;
     margin: 0 auto;
 }
@@ -736,7 +732,6 @@ button{
 /* Form Register */
 
 .register-container{
-    /* background-color: #b6653f; */
     width: 90%;
     height: 100%;
     margin: 8.55rem auto;
@@ -773,7 +768,6 @@ button{
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
-    /* background-color: yellow; */
 }
 
 .sub-left-top{
@@ -791,7 +785,6 @@ button{
 
 .sub-left-bottom ion-icon{
     font-size: 2.5rem;
-
 }
 
 .sub-right-top{
@@ -1057,7 +1050,6 @@ input::placeholder{
 
 .footer-sub-left{
     width: 30%;
-    
 }
 
 .footer-sub-left ul{
@@ -1073,7 +1065,9 @@ input::placeholder{
 .footer-title{
     padding-bottom: 1rem;
 }
-
+ul.footer-ul li a{
+    color: var(--fourth-color);
+}
 .footer-sub-center a,
 .footer-sub-right a{
     text-decoration: none;
@@ -1087,6 +1081,11 @@ input::placeholder{
 
 .footer-sub-right{
     padding-right: 10rem;
+}
+
+.footer-sub-center ul li,
+.footer-sub-right ul li{
+    margin-bottom: 0.5rem;
 }
 
 .copyright {
@@ -1123,11 +1122,9 @@ input::placeholder{
 
 .score-wrapper{
     display: none;
-    /* background-color: yellow; */
     min-height: 100vh;
     width: 100%;
     margin: 0 auto;
-    /* display: flex; */
     align-items: center;
     justify-content: center;
     padding-bottom: 0px;
@@ -1137,10 +1134,6 @@ input::placeholder{
     width: 90%;
     margin: 0 auto;
     height: auto;
-    /* background: url(images/bg1.jpg); */
-    /* margin-top: 1rem; */
-    /* background-size: cover; */
-
 }
 
 
@@ -1161,8 +1154,6 @@ input::placeholder{
     width: 30rem;
     height: 15rem;
     border-radius: 1rem;
-    /* object-fit: cover; */
-   
 }
 
 .quiz-image{
@@ -1177,7 +1168,6 @@ input::placeholder{
     display: flex;
     gap: 1rem;
     justify-content: start;
-    /* align-items: flex-start; */
     height: 20rem;
     color: var(--fourth-color);
     box-sizing: border-box;
@@ -1191,7 +1181,6 @@ input::placeholder{
     justify-content:flex-start ;
     gap: 0.5rem;
     width: 50rem;
-    /* margin-top: 10px; */
 }
 
 .soal{
@@ -1202,8 +1191,6 @@ input::placeholder{
     gap: 1rem;
     justify-content: center;
     align-items: center;
-   
-
 }
 
 .nomor{
@@ -1223,10 +1210,8 @@ input::placeholder{
     width: 25%;
     height: 12rem;
     border-radius: 1rem;
-    /* text-align: center; */
     display: flex;
     flex-direction: column;
-
 }
 
 .quiz-bott-1 button{
@@ -1326,8 +1311,6 @@ input::placeholder{
 
 
 .score-tittle{
-    /* width: 100%; */
-    /* background-color: #8b0000; */
     display: flex;
     gap: 30rem;
     justify-content: space-between;
