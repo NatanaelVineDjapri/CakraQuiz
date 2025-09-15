@@ -288,7 +288,6 @@ ul li {
     border-radius: 2rem;
 }
 
-/* b6653f */
 .quotes-left{
     width: 30rem;
     display: flex;
@@ -605,17 +604,21 @@ button{
     box-sizing: border-box;
     padding: 1rem;
     align-items: center;
-    /* justify-content: space-around; */
     margin-bottom: 1rem;
 }
 
 .statistik-sub:hover,
+.sub-right-quiz:hover,
+.quiz-bott-1:hover,
 .youtube-sub iframe:hover{
     transform: scale(1.03);
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
 }
 
+.sub-right-quiz{
+    cursor: pointer;
+}
 .statistik-sub img{
     width: 4rem;
     height: 4rem;
